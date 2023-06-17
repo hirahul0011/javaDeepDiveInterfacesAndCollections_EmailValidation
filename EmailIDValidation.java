@@ -43,7 +43,7 @@ public class EmailIDValidation {
 			return false;
 		}
 	}
-
+	
 }
 
 
@@ -54,7 +54,5 @@ class Employee{
 		this.id = id;
 		this.name = name;
 		this.emailID = emailID;
-	}
-	
-	
+	}	
 }
