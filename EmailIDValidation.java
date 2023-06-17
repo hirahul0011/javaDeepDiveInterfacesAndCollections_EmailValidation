@@ -19,9 +19,14 @@ public class EmailIDValidation {
 		list.add(e4);
 		list.add(e5);
 		
+		OperationsLoop:
+		do{			
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Please enter your email ID");
+		System.out.println("Please enter your email ID or enter 0 to exit");
 		String emailID=sc.next();
+		if(emailID.equals("0")) {
+			break OperationsLoop;
+		}
 		int check=0;
 		for(Employee e:list) {
 			if(check(e.emailID,emailID)){
@@ -32,7 +37,8 @@ public class EmailIDValidation {
 		}
 		if(check==0) {
 			System.out.println("This email ID seems incorrect, please enter correct email ID");
-		}		
+		}
+		}while(1!=0);
 
 	}
 	
