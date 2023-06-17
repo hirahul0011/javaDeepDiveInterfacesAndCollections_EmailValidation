@@ -19,7 +19,20 @@ public class EmailIDValidation {
 		list.add(e4);
 		list.add(e5);
 		
-				
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Please enter your email ID");
+		String emailID=sc.next();
+		int check=0;
+		for(Employee e:list) {
+			if(check(e.emailID,emailID)){
+				System.out.println("Your Employee ID and Name is "+e.id+" and "+e.name);
+				check=1;
+				break;
+			}
+		}
+		if(check==0) {
+			System.out.println("This email ID seems incorrect, please enter correct email ID");
+		}		
 
 	}
 	
