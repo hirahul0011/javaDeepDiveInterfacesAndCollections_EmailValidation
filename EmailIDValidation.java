@@ -1,6 +1,7 @@
 package javaInterfacesAndCollections_EmailValidation;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class EmailIDValidation {
 
@@ -8,20 +9,26 @@ public class EmailIDValidation {
 		// TODO Auto-generated method stub
 		ArrayList<Employee> list=new ArrayList<Employee>();
 		Employee e1=new Employee(1001,"A","a@sl.com");
-		Employee e2=new Employee(1001,"B","b@sl.com");
-		Employee e3=new Employee(1001,"C","c@sl.com");
-		Employee e4=new Employee(1001,"D","d@sl.com");
-		Employee e5=new Employee(1001,"E","e@sl.com");
+		Employee e2=new Employee(1002,"B","b@sl.com");
+		Employee e3=new Employee(1003,"C","c@sl.com");
+		Employee e4=new Employee(1004,"D","d@sl.com");
+		Employee e5=new Employee(1005,"E","e@sl.com");
 		list.add(e1);
 		list.add(e2);
 		list.add(e3);
 		list.add(e4);
 		list.add(e5);
 		
-		for(Employee e:list) {
-			System.out.println(e.id+" "+e.name+" "+e.emailID);
-		}
+				
 
+	}
+	
+	public static boolean check(String a, String b) {
+		if(a.equalsIgnoreCase(b)) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }
